@@ -1,21 +1,21 @@
 import "dart:math";
 import "dart:io";
 
-var ageRatio = [{dogAgeRatio}, {catAgeRatio}]; 
+var ageRatio = [{dogAgeRatio}, {catAgeRatio}, {bearAgeRatio}, {chickenAgeRatio}, {elephantAgeRatio}, {humanAgeRatio}, {rabbitAgeRatio}]; 
 
-var dogAgeRatio = {'bear': 0.55, 'cat': 0.88, 'chicken': 1.47, 'elephant': 0.31, 'human': 0.28, 'rabbit': 2.44};
+var dogAgeRatio = {'dogTobear': 0.55, 'dogTocat': 0.88, 'dogTochicken': 1.47, 'dogToelephant': 0.31, 'dogTohuman': 0.28, 'dogTorabbit': 2.44};
 
-var catAgeRatio = {'bear': 0.63, 'dog': 1.14, 'chicken': 1.67, 'elephant': 0.36, 'human': 0.31, 'rabbit': 2.78};
+var catAgeRatio = {'catTobear': 0.63, 'catTodog': 1.14, 'catTochicken': 1.67, 'catToelephant': 0.36, 'catTohuman': 0.31, 'catTorabbit': 2.78};
 
-var bearAgeRatio = {'cat': 1.6, 'dog': 1.82, 'chicken': 2.67, 'elephant': 0.57, 'human': 0.5, 'rabbit': 4.44};
+var bearAgeRatio = {'bearTocat': 1.6, 'bearTodog': 1.82, 'bearTochicken': 2.67, 'bearToelephant': 0.57, 'bearTohuman': 0.5, 'bearTorabbit': 4.44};
 
-var chickenAgeRatio = {'bear': 0.38, 'dog': 0.68, 'cat': 0.6, 'elephant': 0.21, 'human': 0.19, 'rabbit': 1.67};
+var chickenAgeRatio = {'chickenTobear': 0.38, 'chickenTodog': 0.68, 'chickenTocat': 0.6, 'chickenToelephant': 0.21, 'chickenTohuman': 0.19, 'chickenTorabbit': 1.67};
 
-var elephantAgeRatio = {'bear': 1.75, 'dog': 3.18, 'chicken': 4.67, 'cat': 2.8, 'human': 0.88, 'rabbit': 7.78};
+var elephantAgeRatio = {'elephantTobear': 1.75, 'elephantTodog': 3.18, 'elephantTochicken': 4.67, 'elephantTocat': 2.8, 'elephantTohuman': 0.88, 'elephantTorabbit': 7.78};
 
-var humanAgeRatio = {'bear': 2, 'dog': 3.64, 'chicken': 5.33, 'cat': 3.2, 'elephant': 1.14, 'rabbit': 8.89};
+var humanAgeRatio = {'humanTobear': 2, 'humanTodog': 3.64, 'humanTochicken': 5.33, 'humanTocat': 3.2, 'humanToelephant': 1.14, 'humanTorabbit': 8.89};
 
-var rabbitAgeRatio = {'bear': 0.23, 'dog': 0.41, 'chicken': 0.6, 'cat': 0.36, 'elephant': 0.13, 'human': 0.11};
+var rabbitAgeRatio = {'rabbitTobear': 0.23, 'rabbitTodog': 0.41, 'rabbitTochicken': 0.6, 'rabbitTocat': 0.36, 'rabbitToelephant': 0.13, 'rabbitTohuman': 0.11};
 
 int age(String promptAge) {
     print(promptAge);
@@ -36,25 +36,20 @@ void main() {
   //int animalAge = int.parse(stdin.readLineSync());
 
   if(animalName == "dog") {
-    print(dogAgeRatio);
-  } else {
+    print(ageRatio[0]);
+    } else if(animalName == "cat") {
     print(catAgeRatio);
+    } else if (animalName == "elephant"){
     print(elephantAgeRatio);
+    } else if (animalName == "human") {
     print(humanAgeRatio);
+    } else if (animalName == "chicken") {
     print(chickenAgeRatio);
+    } else if (animalName == "rabbit") {
     print(rabbitAgeRatio);
+    } else {
     print(bearAgeRatio);
 }
 
 
 }
-
-/*
-if dog
-- bear - 0.55
-- cat - 0.88
-- chicken - 1.47
-- elephant - 0.31
-- human - 0.28
-- rabbit - 2.44
-*/
