@@ -1,7 +1,7 @@
 import "dart:math";
 import "dart:io";
 
-var ageRatio = [{dogAgeRatio}, {catAgeRatio}, {bearAgeRatio}, {chickenAgeRatio}, {elephantAgeRatio}, {humanAgeRatio}, {rabbitAgeRatio}]; 
+//var ageRatio = [{dogAgeRatio}, {catAgeRatio}, {bearAgeRatio}, {chickenAgeRatio}, {elephantAgeRatio}, {humanAgeRatio}, {rabbitAgeRatio}]; 
 
 var dogAgeRatio = {'dogTobear': 0.55, 'dogTocat': 0.88, 'dogTochicken': 1.47, 'dogToelephant': 0.31, 'dogTohuman': 0.28, 'dogTorabbit': 2.44};
 
@@ -35,8 +35,10 @@ void main() {
   int howOld = age("What is the age of the animal? ");
   //int animalAge = int.parse(stdin.readLineSync());
 
+List selectList = [];
+
   if(animalName == "dog") {
-    print(ageRatio[0]);
+    print("these are the relatve animal ages: ${dogAgeRatio.values}");
     } else if(animalName == "cat") {
     print(catAgeRatio);
     } else if (animalName == "elephant"){
