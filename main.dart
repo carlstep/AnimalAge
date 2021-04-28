@@ -35,23 +35,49 @@ void main() {
   int howOld = age("What is the age of the animal? ");
   //int animalAge = int.parse(stdin.readLineSync());
 
-List selectList = [];
+var selectedValues = [];
+//var selectedKey = [];
 
   if(animalName == "dog") {
+    selectedValues = dogAgeRatio.values.toList();
+    //selectedKey = dogAgeRatio.keys.toList();
     print("these are the relatve animal ages: ${dogAgeRatio.values}");
     } else if(animalName == "cat") {
-    print(catAgeRatio);
+    selectedValues = catAgeRatio.values.toList();
+    //selectedKey = catAgeRatio.keys.toList();
+    print("these are the relatve animal ages: ${catAgeRatio.values}");
     } else if (animalName == "elephant"){
-    print(elephantAgeRatio);
+    selectedValues = elephantAgeRatio.values.toList();
+    //selectedKey = elephantAgeRatio.keys.toList();
+    print("these are the relatve animal ages: ${elephantAgeRatio.values}");
     } else if (animalName == "human") {
-    print(humanAgeRatio);
+    selectedValues = humanAgeRatio.values.toList();
+    //selectedKey = humanAgeRatio.keys.toList();
+    print("these are the relatve animal ages: ${humanAgeRatio.values}");
     } else if (animalName == "chicken") {
-    print(chickenAgeRatio);
+    selectedValues = chickenAgeRatio.values.toList();
+    //selectedKey = chickenAgeRatio.keys.toList();
+    print("these are the relatve animal ages: ${chickenAgeRatio.values}");
     } else if (animalName == "rabbit") {
-    print(rabbitAgeRatio);
+    selectedValues = rabbitAgeRatio.values.toList();
+    //selectedKey = rabbitAgeRatio.keys.toList();
+    print("these are the relatve animal ages: ${rabbitAgeRatio.values}");
     } else {
-    print(bearAgeRatio);
+    selectedValues = bearAgeRatio.values.toList();
+    //selectedKey = bearAgeRatio.keys.toList();
+    print("these are the relatve animal ages: ${bearAgeRatio.values}");
 }
 
+//var selectedList = dogAgeRatio.values.toList();
+
+for (double item in selectedValues) {
+    print(item * howOld);
+    //print(dogAgeRatio.key);
+}
+
+//double dogBearAge = dogRatioList.reduce((value, element) =>  * howOld;
+//print(dogRatioList.forEach * howOld);
 
 }
+// DONE - how to take the ratio values of the animal and multiply by a given age 
+// TODO - how to asign the key to the output values or (return key:value, value * howOld)?
