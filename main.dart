@@ -77,7 +77,7 @@ void main() {
 
 }
 
-}
 // DONE - how to take the ratio values of the animal and multiply by a given age 
 // DONE - how to asign the key to the output values or (return key:value, value * howOld)?
-// TODO - can the 
+// TODO - how to make the Age ouput a double with two points only eg 2.75 and not 5.699887
+// TODO - can the code be shortened by making a a single function that can be called in the if/else if statements
