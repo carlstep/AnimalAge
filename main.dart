@@ -38,6 +38,8 @@ String prompt(String promptAnimal) {
     // the prompt function for userInput <String> 'promptAnimal'
 }
 
+
+
 void main() {
   String animalName = prompt('choose from - dog, bear, cat, chicken, elephant, human, rabbit: '); 
   // calls the promptAnimal function to get the animal choice.
@@ -47,37 +49,37 @@ void main() {
 
   if(animalName == "dog") {
     dogAgeRatio.entries.forEach((element) =>
-        print('${element.key} => ${element.value * howOld}'));
+        print('${element.key} => ${(element.value * howOld).toStringAsFixed(2)}'));
         // called if userInput is 'dog', takes each k:v entry, assigns to 'element' and prints the key and value(value * howOld). 
 
     } else if(animalName == "cat") {
     catAgeRatio.entries.forEach((element) =>
-        print('${element.key} => ${element.value * howOld}'));
+        print('${element.key} => ${(element.value * howOld).toStringAsFixed(2)}'));
     
     } else if (animalName == "elephant"){
     elephantAgeRatio.entries.forEach((element) =>
-        print('${element.key} => ${element.value * howOld}'));
+        print('${element.key} => ${(element.value * howOld).toStringAsFixed(2)}'));
 
     } else if (animalName == "human") {
     humanAgeRatio.entries.forEach((element) =>
-        print('${element.key} => ${element.value * howOld}'));
+        print('${element.key} => ${(element.value * howOld).toStringAsFixed(2)}'));
 
     } else if (animalName == "chicken") {
     chickenAgeRatio.entries.forEach((element) =>
-        print('${element.key} => ${element.value * howOld}'));
+        print('${element.key} => ${(element.value * howOld).toStringAsFixed(2)}'));
 
     } else if (animalName == "rabbit") {
     rabbitAgeRatio.entries.forEach((element) =>
-        print('${element.key} => ${element.value * howOld}'));
+        print('${element.key} => ${(element.value * howOld).toStringAsFixed(2)}'));
     
     } else {
     bearAgeRatio.entries.forEach((element) =>
-        print('${element.key} => ${element.value * howOld}'));
+        print('${element.key} => ${(element.value * howOld).toStringAsFixed(2)}'));
     }
 
 }
 
 // DONE - how to take the ratio values of the animal and multiply by a given age 
 // DONE - how to asign the key to the output values or (return key:value, value * howOld)?
-// TODO - how to make the Age ouput a double with two points only eg 2.75 and not 5.699887
+// DONE - how to make the Age ouput a double with two points only eg 2.75 and not 5.699887 !! used toStringAsFixed(2)
 // TODO - can the code be shortened by making a a single function that can be called in the if/else if statements
