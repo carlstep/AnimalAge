@@ -1,7 +1,7 @@
 import "dart:math";
 import "dart:io";
 
-//var ageRatio = [{dogAgeRatio}, {catAgeRatio}, {bearAgeRatio}, {chickenAgeRatio}, {elephantAgeRatio}, {humanAgeRatio}, {rabbitAgeRatio}]; 
+//var ageRatio = [{dog}, {cat}, {bear}, {chicken}, {elephant}, {human}, {rabbit}]; 
 
 var dog = {'Bear': 0.55, 'Cat': 0.88, 'Chicken': 1.47, 'Elephant': 0.31, 'Human': 0.28, 'Rabbit': 2.44}; 
 // dog age ratio Map.
