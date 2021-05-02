@@ -39,8 +39,10 @@ void main() {
     // calls the promptAnimal function, assigns userInput - age - to howOld.
 
     humanMap.forEach((key, val) {
-        print("the animal is ${key} and the age in human years is ${howOld}");
+        print("the animal is ${key}, the ${key} age is ${howOld} and the age in human years is ${(howOld / val).toStringAsFixed(1)}");
 }); // this returns a a list of animals in the map + howOld userInput.
+
+    //${(element.value * howOld).toStringAsFixed(2)}
 
 }
 
