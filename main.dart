@@ -1,6 +1,7 @@
 import "dart:math";
 import "dart:io";
 
+// a single Map will make it easier to add new animalAgeRatio to the list.
 var humanMap = {
     'Bear': 2,
     'Chicken': 5.33, 
@@ -44,4 +45,5 @@ void main() {
 }
 
 
+// TODO - figure out the logic of the age calculations.
 
