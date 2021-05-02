@@ -31,6 +31,7 @@ String prompt(String promptAnimal) {
     // the prompt function for userInput <String> 'promptAnimal'
 }
 
+
 void main() {
     String animalName = prompt('choose from - ${humanMap.keys}: '); 
     // calls the promptAnimal function, displays the animal names from the Map
@@ -39,13 +40,14 @@ void main() {
     // calls the promptAnimal function, assigns userInput - age - to howOld.
 
     humanMap.forEach((key, val) {
-        print("the animal is ${key}, the ${key} age is ${howOld} and the age in human years is ${(howOld / val).toStringAsFixed(1)}");
+        print("In ${howOld} human years, a ${key}'s age would be approx. ${(howOld * val).toStringAsFixed(1)} ");
 }); // this returns a a list of animals in the map + howOld userInput.
 
     //${(element.value * howOld).toStringAsFixed(2)}
 
 }
 
-
+// TODO - create function to call calc (how many calculations/functions are needed 
 // TODO - figure out the logic of the age calculations.
+// TODO - configure to calc decimals points to month
 
