@@ -11,6 +11,10 @@ var humanMap = {
     'Rabbit': 8.89,
     }; // human age ratio Map.
 
+// ageRatioCalc examples - 
+// - (animalYear(cat - 8) / human(3.2) = 2.5) * animal(dog - 3.64) = 9.1 (catAge=8, humanAge=2.5, dogAge=9.1) 
+// - (animalYear(human - 10) / human(1) = 10) * animal(dog - 3.64) = 36.4 (humanAge=10, humanAge=10, dogAge=36.4)
+// - (animalYear(elephant - 10) / human(1) = 8.77) * animal(dog - 3.64) = 31.9 (elephantAge=10, humanAge=8.77, dogAge=31.9)
 
 int age(String promptAge) {
     print(promptAge);
