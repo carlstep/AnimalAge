@@ -34,7 +34,7 @@ String prompt(String promptAnimal) {
 void ageCalc() {
     humanMap.forEach((key, val) {
         print("In ${howOld} human years, a ${key}'s age would be approx. ${(howOld * val).toStringAsFixed(1)} ");
-}); // this returns a a list of animals in the map + howOld userInput.
+}); // function to return a list of animals in the map + howOld userInput.
 
 
 }
