@@ -35,6 +35,9 @@ String prompt(String promptAnimal) {
 void main() {
     String animalName = prompt('choose from - ${humanMap.keys}: '); 
     // calls the promptAnimal function, displays the animal names from the Map
+    
+    // checks to if userInput for animalName is equal to the humanMap keys
+    bool mapEntryCheck = humanMap.containsKey(animalName);
   
     int howOld = age("In human years what is the age of the animal? ");
     // calls the promptAnimal function, assigns userInput - age - to howOld.
@@ -49,5 +52,5 @@ void main() {
 
 // TODO - create function to call calc (how many calculations/functions are needed 
 // TODO - figure out the logic of the age calculations.
-// TODO - configure to calc decimals points to month
+// TODO - configure to calc decimals points to month. !!
 
