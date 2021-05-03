@@ -55,8 +55,8 @@ void main() {
         ageCalc();
     } else {
         //print("Choose again!");
-        newAnimal = prompt("Type '$animalName' again to add to the list.");
-        animalRatio = ratio("Enter a number in decimal format, eg 2.3: ");
+        newAnimal = prompt("Type '$animalName' again to add to the list."); // adds a new animal key to animalName
+        animalRatio = ratio("Enter a number in decimal format, eg 2.3: "); // adds ratio value to animalRatio
         print("$newAnimal and $animalRatio");
         humanMap.putIfAbsent(newAnimal, () => animalRatio); // puts the new animal:ratio (k,v) pair into the humanMap.
         print(humanMap);
