@@ -3,13 +3,13 @@ import "dart:io";
 
 // a single Map will make it easier to add new animalAgeRatio to the list.
 var humanMap = {
-    'Bear': 2,
-    'Chicken': 5.33, 
-    'Cat': 3.2, 
-    'Dog': 3.64, 
-    'Elephant': 1.14,
-    'Human': 1,
-    'Rabbit': 8.89,
+    'bear': 2,
+    'chicken': 5.33, 
+    'cat': 3.2, 
+    'dog': 3.64, 
+    'elephant': 1.14,
+    'human': 1,
+    'rabbit': 8.89,
     }; // human age ratio Map.
 
 // ageRatioCalc examples - 
@@ -31,6 +31,13 @@ String prompt(String promptAnimal) {
     // the prompt function for userInput <String> 'promptAnimal'
 }
 
+double ratio(String ageRatio) {
+    print(ageRatio);
+    double answerRatio = double.parse(stdin.readLineSync());
+    return answerRatio; 
+    // the prompt function for userInput <double> 'ratio'
+}
+
 void ageCalc() {
     print("In ${howOld} human years - ");
     humanMap.forEach((key, val) {
@@ -44,7 +51,8 @@ void addAnimal() {
 }
 
 int howOld = 0;
-
+String newAnimal = "";
+double animalRatio = 0.0;
 
 void main() {
     String animalName = prompt('choose from - ${humanMap.keys}: '); 
@@ -52,12 +60,17 @@ void main() {
     
     // checks if userInput for animalName contains Key in humanMap - if true 
     if (humanMap.containsKey(animalName)) {
-        print("your choise is ${animalName}");
+        print("your choice is ${animalName}");
         // calls the promptAnimal function, assigns userInput - age - to howOld.
         howOld = age("In human years what is the age of the ${animalName}? ");
         ageCalc();
     } else {
-        print("Choose again!");
+        //print("Choose again!");
+        newAnimal = prompt("Type '$animalName' again to add to the list.");
+        animalRatio = ratio("Enter a number in decimal format, eg 2.3: ");
+        print("$newAnimal and $animalRatio");
+        humanMap.putIfAbsent(newAnimal, () => animalRatio);
+        print(humanMap);
         main();
         }
   
