@@ -31,17 +31,23 @@ String prompt(String promptAnimal) {
     // the prompt function for userInput <String> 'promptAnimal'
 }
 
+int howOld = 0;
+
 
 void main() {
     String animalName = prompt('choose from - ${humanMap.keys}: '); 
     // calls the promptAnimal function, displays the animal names from the Map
     
-    // checks to if userInput for animalName is equal to the humanMap keys
-    bool mapEntryCheck = humanMap.containsKey(animalName);
+    // checks if userInput for animalName contains Key in humanMap - if true 
+    if (humanMap.containsKey(animalName)) {
+        print("you chose ${animalName}");
+        // calls the promptAnimal function, assigns userInput - age - to howOld.
+        howOld = age("In human years what is the age of the ${animalName}? ");
+    } else {
+        print("Choose again!");
+        main();
+        }
   
-    int howOld = age("In human years what is the age of the animal? ");
-    // calls the promptAnimal function, assigns userInput - age - to howOld.
-
     humanMap.forEach((key, val) {
         print("In ${howOld} human years, a ${key}'s age would be approx. ${(howOld * val).toStringAsFixed(1)} ");
 }); // this returns a a list of animals in the map + howOld userInput.
