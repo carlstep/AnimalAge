@@ -36,7 +36,7 @@ void ageCalc() {
     print("In ${howOld} human years - ");
     humanMap.forEach((key, val) {
         print("- a ${key}'s age would be approx. ${(howOld * val).toStringAsFixed(1)} ");
-}); // function to return a list of animals in the map + howOld userInput.
+}); // function to return a list of animals in the map + howOld userInput and calculates the relative animal age.
 }
 
 int howOld = 0;
@@ -64,7 +64,7 @@ void main() {
         }
 }
 
-// TODO - create function to call calc (how many calculations/functions are needed 
-// TODO - figure out the logic of the age calculations.
+// TODO - figure out the logic of the age calculations humanYears > animalAge / animalAge > animalAge.
 // TODO - configure to calc decimals points to month. !!
+// TODO - how to apply class/es to the code?
 
