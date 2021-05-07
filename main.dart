@@ -11,6 +11,23 @@ var humanMap = {
     'rabbit': 8.89,
     }; // human age ratio Map.
 
+class Animal {
+    String animalName;          //  "bear"
+    double animalAgeRatio;      //  2
+    int animalAge;              // 7
+    
+    Animal(this.animalName, this.animalAgeRatio, this.animalAge); 
+
+    getAnimalInfo() {
+        return '''Animal details are:
+-------------------
+    Animal Name: $animalName
+    Animal Age to Human Age Ratio: $animalAgeRatio
+    Animal Age in Years: $animalAge
+-------------------''';
+}
+}
+
 int age(String promptAge) {
     print(promptAge);
     int answerAge = int.parse(stdin.readLineSync());
@@ -44,6 +61,7 @@ String newAnimal = "";
 double animalRatio = 0.0;
 
 void main() {
+
     String animalName = prompt('choose from - ${humanMap.keys}: '); 
     // calls the promptAnimal function, displays the animal names from the Map
     
@@ -62,6 +80,8 @@ void main() {
         print(humanMap);
         main();
         }
+    var animal1 = new Animal("ferret", 2.3, 3);
+    print(animal1.getAnimalInfo());
 }
 
 // TODO - figure out the logic of the age calculations humanYears > animalAge / animalAge > animalAge.
